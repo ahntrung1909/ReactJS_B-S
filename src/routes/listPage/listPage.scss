@@ -1,0 +1,28 @@
+@import "../../responsive.scss";
+
+.list-page{
+    display: flex;
+    height: 100%;
+
+    .list-container{
+        flex: 3;
+
+        .wrapper{
+            height: 100%;
+            overflow-y: scroll;
+            //muốn overflow scroll thì thằng đó 
+            //phải có height: 100vh hoặc 100% tùy trg hợp
+            padding-right: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding-bottom: 50px;
+        }
+    }
+
+    .map-container{
+        flex: 2;
+        height: 100%;
+        background-color: #fcf5f3;
+    }
+}

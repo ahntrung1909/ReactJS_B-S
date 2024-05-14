@@ -1,0 +1,91 @@
+@import "../../responsive.scss";
+
+.search-bar{
+    .type{
+        button{
+            padding: 16px 36px;
+            border: 1px solid grey;
+            border-bottom: none;
+            cursor: pointer;
+            background-color: white;
+            text-transform: capitalize;
+
+            &.active{
+                background-color: black;
+                color: white;
+            }
+
+            &:first-child{
+                border-top-left-radius: 5px;
+                border-right: none;
+
+            }
+        
+            &:last-child{
+                border-top-right-radius: 5px;
+                border-left: none;
+            }
+        }
+    }
+
+    form{
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid grey;
+        height: 64px;
+        gap: 5px;
+
+        @include small{
+            flex-direction: column;
+            border: none;
+        }
+
+        input{
+            border: none;
+            width: 150px;
+
+            &:nth-child(1){
+                padding-left: 5px;
+            }
+
+            @include large{
+                padding: 0 5px;
+                &:nth-child(2), &:nth-child(3){
+                    width: 125px;
+                }
+            }
+
+            @include medium{
+                width: 200px;
+                &:nth-child(2), &:nth-child(3){
+                    width: 200px;
+                }
+            }
+
+            @include small{
+                width: auto;
+                &:nth-child(2), &:nth-child(3){
+                    width: auto;
+                }
+                padding: 20px;
+                border: 1px solid grey;
+            }
+        }
+
+        button{
+            background-color: #fece51;
+            border: none;
+            cursor: pointer;
+            flex: 1;    
+
+            @include small{
+                padding: 10px;
+            }
+            
+            img{
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}
